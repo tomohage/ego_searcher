@@ -206,14 +206,13 @@ def create_attention_ranking(twitter_controller, best = 10):
         print '投稿日: ' + created_at.strftime('%Y-%m-%d %H:%M:%S')
         print 'ファボ数: ' + str(tweet.favorite_count)
         print 'リツイート数: ' + str(tweet.retweet_count)
-        print u'本文: ' + tweet.text
+        print '本文: ' + tweet.text
         url = 'https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str
         print 'URL: ' + url
         print '------------------------------------------------'
         count += 1
         if count > best:
             break
-    exit()
 
 if __name__ == "__main__":
     try:
